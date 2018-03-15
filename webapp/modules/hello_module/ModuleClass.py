@@ -1,2 +1,5 @@
-def default():
-	return "Hello World from Module"
+def default(x=True):
+    if x:
+        return "Hello World from Module"
+    else:
+        return "My class"
