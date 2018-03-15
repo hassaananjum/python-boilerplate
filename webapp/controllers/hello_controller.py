@@ -1,7 +1,8 @@
-from flask import Blueprint, request, render_template, session, redirect, Response
-import ModuleClass
+from flask import Blueprint, render_template
 
-module = Blueprint('Module', 
+from ..modules.hello_module import ModuleClass
+
+module = Blueprint('Module',
 	__name__, 
 	url_prefix='/hello',
 	static_folder='static',
@@ -10,7 +11,7 @@ module = Blueprint('Module',
 
 @module.route('/', methods=['GET', 'POST'])
 def index():
-	message = ModuleClass.main();
+	message = ModuleClass.default()
 	return render_template(
 		'index.html', 
 		title="Hello", 
