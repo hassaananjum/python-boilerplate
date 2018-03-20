@@ -1,0 +1,18 @@
+<html>
+	<head>
+		<title>{{ title }}</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}" type="text/css">
+	</head>
+	<body>
+		<h2>{{ redirect_message }}</h2>
+		<form action="/auth/login" method="post" enctype="multipart/form-data">
+			<div style="display:block">
+				<p>Email:<input type="text" name="email"/></p>
+			</div>
+			<div style="display:block">
+				<p>Password:<input type="text" name="password"/></p>
+			</div>
+			<input type="submit" style="font-size:large" value="Login"/>
+		</form>
+	</body>
+</html>

@@ -1,2 +1,2 @@
 #!/bin/bash
-python3 -m unittest webapp/tests/hello_test.py
+python3 -m unittest tests/index_test.py

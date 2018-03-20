@@ -1,5 +1,5 @@
 import unittest
-from ..modules.hello_module import ModuleClass
+from app.modules.index_module import ModuleClass
 
 class Tests(unittest.TestCase):
     def test_module_class_default_method(self):

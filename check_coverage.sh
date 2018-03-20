@@ -1,4 +1,4 @@
 #!/bin/bash
 
-coverage run -m unittest webapp/tests/hello_test.py
+coverage run -m unittest tests/index_test.py
 coverage report -m

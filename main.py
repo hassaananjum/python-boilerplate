@@ -1,2 +1,4 @@
-from webapp import app
-app.run(host='0.0.0.0', port=4000, debug=False)
+from app import webapp
+
+if __name__ == '__main__':
+    webapp.run(host='0.0.0.0', port=4000, debug=False)
