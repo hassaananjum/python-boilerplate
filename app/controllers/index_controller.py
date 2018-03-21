@@ -47,7 +47,10 @@ def requires_login(api_method):
                     return api_method(*args, **kwargs)
                 else:
                     return render_template('login.html', title="Login",
-                                    redirected="You need to login first, then try again")
+                                           redirect_message="You need to login first, then try again")
+            else:
+                return render_template('login.html', title="Login",
+                                       redirect_message=resp)
         else:
             return render_template('login.html', title="Login",
                                    redirect_message="No auth token provided, please login")
